@@ -1,10 +1,10 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Brands from "./components/brands";
-import Gallery from './components/Gallery';
-import Models from './components/Model';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Brands from "./components/Brands";
+import Gallery from "./components/Gallery";
+import Models from "./components/Model";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 function App() {
   return (
     <>
@@ -17,7 +17,6 @@ function App() {
       <Gallery />
       <Contact />
       <Footer />
-      
     </>
   );
 }
