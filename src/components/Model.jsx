@@ -4,7 +4,7 @@ const models = [
   {
     brand: "Audi",
     name: "RS7 Sportback",
-    img: "/RS7sportback.jpg",
+    img: "/RS7Sportback.jpg",
     specs: {
       engine: "4.0L V8 Twin-Turbo",
       power: "591 HP",
