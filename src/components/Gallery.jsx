@@ -4,7 +4,7 @@ import { useState } from "react";
 const galleryImages = [
   {
     id: 1,
-    src: "/RS7Sportback.jpg",
+    src: "/RS72.jpg",
     brand: "Audi",
     model: "RS7",
   },
