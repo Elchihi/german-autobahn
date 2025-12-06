@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-
   const navItems = ["Home", "Brands", "Models", "Gallery", "Contact"];
 
   return (
@@ -42,24 +41,44 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <motion.ul
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden flex flex-col md:hidden bg-black/80 text-white uppercase font-medium px-6"
-      >
-        {navItems.map((item, i) => (
-          <motion.li
-            key={i}
-            whileHover={{ scale: 1.05, color: "#f7ff00" }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="py-4 border-b border-carbonYellow/20 cursor-pointer"
-          >
-            {item}
-          </motion.li>
-        ))}
-      </motion.ul>
+      {/* AnimatePresence for Overlay */}
+      <AnimatePresence>
+        {open && (
+          <>
+            {/* Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setOpen(false)}
+              className="fixed inset-0 bg-black z-40"
+            />
+
+            {/* Mobile Menu */}
+            <motion.div
+              initial={{ y: "-100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: "-100%", opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="md:hidden bg-black/90 text-white uppercase font-medium w-full absolute top-0 left-0 z-50 shadow-lg"
+            >
+              <ul className="flex flex-col px-6 py-4 gap-4 mt-20">
+                {navItems.map((item, i) => (
+                  <motion.li
+                    key={i}
+                    whileHover={{ scale: 1.05, color: "#f7ff00" }}
+                    transition={{ type: "spring", stiffness: 200 }}
+                    className="py-3 border-b border-carbonYellow/20 cursor-pointer"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item}
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 }
