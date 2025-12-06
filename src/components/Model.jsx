@@ -4,7 +4,7 @@ const models = [
   {
     brand: "Audi",
     name: "RS7 Sportback",
-    img: "/src/assets/models/RS7sportback.jpg",
+    img: "/RS7sportback.jpg",
     specs: {
       engine: "4.0L V8 Twin-Turbo",
       power: "591 HP",
@@ -15,7 +15,7 @@ const models = [
   {
     brand: "BMW",
     name: "M4 Competition",
-    img: "/src/assets/models/M4 Competition.jpg",
+    img: "/M4 Competition.jpg",
     specs: {
       engine: "3.0L Inline-6 Twin-Turbo",
       power: "503 HP",
@@ -26,7 +26,7 @@ const models = [
   {
     brand: "Mercedes",
     name: "AMG GT 63 S",
-    img: "/src/assets/models/AMG GT 63 S.jpg",
+    img: "/AMG GT 63 S.jpg",
     specs: {
       engine: "4.0L V8 Biturbo",
       power: "630 HP",
@@ -37,7 +37,7 @@ const models = [
   {
     brand: "Porsche",
     name: "911 GT3 RS",
-    img: "/src/assets/models/Porsche 911 GT3 RS.jpg",
+    img: "/Porsche 911 GT3 RS.jpg",
     specs: {
       engine: "4.0L Flat-6 Naturally Aspirated",
       power: "640 HP",

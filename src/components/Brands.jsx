@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 const brands = [
   {
     name: "Audi",
-    img: "/src/assets/brands/audi.jpg",
+    img: "/audi.jpg",
     desc: "Progress through technology and unmatched performance.",
   },
   {
     name: "BMW",
-    img: "/src/assets/brands/bmw.jpg",
+    img: "/bmw.jpg",
     desc: "The ultimate driving machine built for pure driving pleasure.",
   },
   {
     name: "Mercedes",
-    img: "/src/assets/brands/merc.jpg",
+    img: "/merc.jpg",
     desc: "Luxury, elegance, and world-class German engineering.",
   },
   {
     name: "Porsche",
-    img: "/src/assets/brands/porsche.jpg",
+    img: "/porsche.jpg",
     desc: "Precision sports performance with iconic timeless design.",
   },
 ];
